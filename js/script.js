@@ -11,13 +11,13 @@ btn.addEventListener('click', () => {
     newToDo()
 })
 
-// input.addEventListener('keydown',(e) =>{
-//     switch (e.key){
-//         case "Enter" : newToDo()
-//             break;
-//         case "Delete" :  input.value = ""
-//             break;
-//     }
+input.addEventListener('keydown',(e) =>{
+    switch (e.key){
+        case "Enter" : newToDo()
+            break;
+        case "Delete" :  input.value = "" && input_tell.value
+            break;
+    }
 
     // if (e.key === "Enter"){
     //     newToDo()
@@ -25,10 +25,10 @@ btn.addEventListener('click', () => {
     // if (e.key === "Delete"){
     //     input.value = ""
     // }
-// })
+})
 
 function newToDo() {
-    if (input.value !== "" && input_tell.value !== ""){
+    if (input_tell.value !== "" && input.value !== ""){
         const newList = `<li class="list-group-item d-flex justify-content-between align-items-center">
  <span class="d-flex align-items-center">
  <div class="circle"> ${input.value[0]}</div>
